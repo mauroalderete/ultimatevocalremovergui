@@ -46,13 +46,13 @@ These bundles contain the UVR interface, Python, PyTorch, and other dependencies
    - Make sure to check "Add python.exe to PATH" during the install
 - Run the following commands from the extracted repo directory:
 
-```
+```bash
 python.exe -m pip install -r requirements.txt
 ```
 
 If you have a compatible Nvidia GPU, run the following command:
 
-```
+```bash
 python.exe -m pip install --upgrade torch --extra-index-url https://download.pytorch.org/whl/cu117
 ```
 
@@ -72,6 +72,32 @@ In order to use the Time Stretch or Change Pitch tool, you'll need Rubber Band.
 - From the archive, extract the following files to the UVR application directory:
    - ```rubberband-3.1.2-gpl-executable-windows/rubberband.exe```
    - ```rubberband-3.1.2-gpl-executable-windows/sndfile.dll```
+
+#### Some knowledge issues
+
+**GPU Support**
+
+If the GPU support is not working after the installation, you can try run the following command: 
+
+```
+python.exe -m pip install torchvision torchaudio pytorch-cuda=11.8
+```
+
+**Missing charset**
+
+Some packages requires upgrade, run the following command:
+
+```
+python.exe -m pip install charset_normalizer==2.1.0
+```
+
+**Numpy version** 
+
+If you've some problems with numpy version, because his version is upper, can you try downgrade it, run the following command:
+
+```
+python.exe -m pip install numpy==1.25
+```
 
 </details>
 
