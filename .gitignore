@@ -24,3 +24,6 @@ build/
 # Virtual environments
 venv/
 env/
+
+# Specifics for this project
+data.pkl
