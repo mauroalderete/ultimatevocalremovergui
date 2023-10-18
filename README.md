@@ -101,6 +101,27 @@ python.exe -m pip install numpy==1.25
 
 </details>
 
+<details id="WindowsManual">
+  <summary>Windows Manual Installation with Conda</summary>
+
+### Windows Manual Installation with Conda
+
+If you'have conda installed can run the following commands from the extracted repo directory:
+
+```bash
+conda create -n <name of your conda env> python=3.10
+
+python.exe -m pip install -r requirements.txt
+python.exe -m pip install --upgrade torch --extra-index-url https://download.pytorch.org/whl/cu117
+
+pip install charset_normalizer==2.1.0
+
+conda install numpy=1.25
+conda install -c conda-forge ffmpeg
+```
+
+</details>
+
 ### MacOS Installation
 - Please Note:
     - The MacOS Sonoma mouse clicking issue has been fixed.
